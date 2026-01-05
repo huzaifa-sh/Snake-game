@@ -1,10 +1,12 @@
 #include<SFML/Graphics.hpp>
 #include"Constants.hpp"
 #include"Grid.hpp"
+#include"Snake.hpp"
 
 
 sf::RenderWindow* window = new sf::RenderWindow(sf::VideoMode({ win_length, win_height }), "Snake");
 Grid* grid1 = new Grid(window);
+Snake* snake1 = new Snake(window);
 
 
 int main() {
@@ -38,12 +40,6 @@ int main() {
 
 				
 	}
-
-
-
-
-
-
 
 
 
