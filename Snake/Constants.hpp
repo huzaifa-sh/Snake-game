@@ -11,3 +11,7 @@ const sf::Color g_color = sf::Color::White;
 
 
 
+
+
+
+
