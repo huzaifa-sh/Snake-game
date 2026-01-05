@@ -5,4 +5,7 @@ Snake::Snake(sf :: RenderWindow * win) {
 
 	Snake::window = win;
 
+	Snake::snake_body.push_back({});
+
+
 }

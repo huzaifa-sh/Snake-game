@@ -13,7 +13,7 @@ class Snake {
 
 private:
 
-	std :: vector<body>snake;
+	std :: vector<body>snake_body;
 	sf::RenderWindow * window;
 
 
