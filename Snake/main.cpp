@@ -26,9 +26,10 @@ int main() {
 
 
 
-				window->clear();
+				window->clear(win_color);
 
 				grid1->Draw();
+				snake1->Draw();
 
 				window->display();
 
