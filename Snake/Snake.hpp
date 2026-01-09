@@ -19,12 +19,12 @@ public:
 
 	sf :: Vector2f get_cell_cord(sf :: Vector2f idx);
 
-	void Move();
+	void Move(Direction dir);
 
 	void Draw();
 
-	void Crash();
+	bool Crash();
 
-	bool Grow();
+	void Grow();
 
 };
