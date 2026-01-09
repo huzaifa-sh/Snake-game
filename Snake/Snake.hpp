@@ -1,5 +1,5 @@
 #pragma once
-#include<vector>
+#include<deque>
 #include"Constants.hpp"
 #include<SFML/Graphics.hpp>
 
@@ -7,7 +7,7 @@ class Snake {
 
 private:
 
-	std :: vector<cord>snake_body;
+	std :: deque<sf :: Vector2f>snake_body;
 	sf::RenderWindow * window;
 
 	int size = 3;
@@ -17,12 +17,14 @@ public:
 
 	Snake(sf :: RenderWindow * win);
 
+	sf :: Vector2f get_cell_cord(sf :: Vector2f idx);
+
 	void Move();
 
 	void Draw();
 
 	void Crash();
 
-	void Grow();
+	bool Grow();
 
 };
