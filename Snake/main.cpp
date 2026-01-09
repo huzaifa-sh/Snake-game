@@ -18,13 +18,13 @@ sf::Clock clock1;
 
 int main() {
 
-	float total_time = 0.f;
+	float elapsed_time = 0.f;
 
 	while (window->isOpen()) {
 	
 		float time = clock1.restart().asSeconds();
 
-		total_time += time;
+		 elapsed_time += time;
 
                 while (const std::optional event = window->pollEvent())
                 {
@@ -44,14 +44,8 @@ int main() {
 				window->clear(win_color);
 
 				grid1->Draw();
-				snake1->Draw();
+				
 
-				if (total_time >= delay_sec) {
-
-					snake1->Move(dir);
-					total_time = 0.f;
-
-				}
 
 				window->display();
 				
