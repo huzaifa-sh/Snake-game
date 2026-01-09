@@ -5,18 +5,26 @@
 
 
 sf::RenderWindow* window = new sf::RenderWindow(sf::VideoMode({ win_length, win_height }), "Snake");
+
+
 Grid* grid1 = new Grid(window);
 Snake* snake1 = new Snake(window);
 
 Direction dir = Direction :: NONE;
 
 
+sf::Clock clock1;
+
+
 int main() {
 
+	float total_time = 0.f;
 
 	while (window->isOpen()) {
 	
-	
+		float time = clock1.restart().asSeconds();
+
+		total_time += time;
 
                 while (const std::optional event = window->pollEvent())
                 {
@@ -37,7 +45,13 @@ int main() {
 
 				grid1->Draw();
 				snake1->Draw();
-				snake1->Move(dir);
+
+				if (total_time >= delay_sec) {
+
+					snake1->Move(dir);
+					total_time = 0.f;
+
+				}
 
 				window->display();
 				

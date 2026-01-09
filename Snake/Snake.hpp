@@ -10,7 +10,7 @@ private:
 	std :: deque<sf :: Vector2f>snake_body;
 	sf::RenderWindow * window;
 
-	int size = 3;
+	int size = def_size_s;
 
 
 public:

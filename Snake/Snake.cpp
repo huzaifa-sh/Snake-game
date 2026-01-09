@@ -50,9 +50,9 @@ void Snake::Move(Direction dir) {
 	sf::Vector2f newseg(snake_body[0].x , snake_body[0].y);
 
 	if (dir == Direction::UP) newseg.y -= 1;
-	else if (dir == Direction::DOWN)newseg.y += 1;
-	else if (dir == Direction::LEFT)newseg.x -= 1;
-	else if (dir == Direction::RIGHT)newseg.x += 1;
+	if (dir == Direction::DOWN)newseg.y += 1;
+    if (dir == Direction::LEFT)newseg.x -= 1;
+    if (dir == Direction::RIGHT)newseg.x += 1;
 
 	snake_body.push_front(newseg);
 	snake_body.pop_back();

@@ -11,6 +11,9 @@ const float n_cell_x = (win_length - 2 * margin)/cellsize;
 const float n_cell_y = (win_height - 2 * margin)/cellsize;
 const sf::Vector2f def_cell(n_cell_x / 2 - 1, n_cell_y / 2 - 1);
 
+const int def_size_s = 5;
+
+const float delay_sec = 0.15f;
 
 const sf::Color g_color = sf::Color::White;
 const sf::Color win_color = sf::Color::Black;
